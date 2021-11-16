@@ -25,6 +25,5 @@ async def on_ready():
         activity=discord.Activity(name=f"Cu!help | {str(servers)}servers | {str(members)}users", type=3)
     )
 
-bot.load_extension("Cogs.bot","Cogs.tool","Cogs.data","Cogs.variety")
 
 bot.run(token)
