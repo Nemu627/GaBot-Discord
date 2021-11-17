@@ -5,7 +5,7 @@ import os
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)
 bot = commands.Bot(
-    command_prefix=["Cu!", "cu!"],
+    command_prefix=["Te!", "te!"],
     help_command=None,
     intents=intents,
     allowed_mentions=discord.AllowedMentions(replied_user=False, everyone=False),
@@ -22,8 +22,9 @@ async def on_ready():
     for guild in bot.guilds:
         members += guild.member_count - 1
     await bot.change_presence(
-        activity=discord.Activity(name=f"Cu!help | {str(servers)}servers | {str(members)}users", type=3)
+        activity=discord.Activity(name=f"test client | {str(servers)}servers | {str(members)}users", type=3)
     )
 
-
+bot.load_extension("Cogs.sub")
+    
 bot.run(token)
