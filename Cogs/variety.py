@@ -181,7 +181,7 @@ class AppCmdVariety(commands.Cog):
         async with ctx.typing():
             await asyncio.sleep(0)
         embed = discord.Embed(title="5000兆円ジェネレーター",description=over+under)
-        embed.set_image(url=f"https://gsapi.cyberrex.jp/image?top={int(over)}&bottom={int(under)}")
+        embed.set_image(url=f"https://gsapi.cyberrex.jp/image?top={over}&bottom={under}")
         await ctx.reply(embed=embed)
 
 def setup(bot):
