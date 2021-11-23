@@ -19,7 +19,7 @@ class AppCmdVariety(commands.Cog):
         akekka = discord.Embed(
             title="おみくじ",
             description=f"{ctx.author.mention}さんの今日の運勢は！\n`運勢`：{unsei}\n`ラッキーコマンド`：Cu!{luckycmd}",
-            color=0x3498DB,
+            color=0xffa500,
         )
         akekka.set_thumbnail(url=ctx.author.avatar.url)
         message = await ctx.reply(embed=taiki)
@@ -79,7 +79,7 @@ class AppCmdVariety(commands.Cog):
         async with ctx.typing():
             await asyncio.sleep(0)
         dice = random.randint(1, 6)
-        embed = discord.Embed(title="サイコロ", description="[出目] " + str(dice), colour=0x3498DB)
+        embed = discord.Embed(title="サイコロ", description="[出目] " + str(dice), colour=0xffa500)
         embed.set_thumbnail(
             url="https://smilescience.up.seesaa.net/image/E382B5E382A4E382B3E383ADE381AEE79BAEE5B08F_"
                 + str(dice)
@@ -143,14 +143,14 @@ class AppCmdVariety(commands.Cog):
             await asyncio.sleep(0)
         surface = random.choice(("表", "裏"))
         if surface == "表":
-            embed = discord.Embed(title="コイントス", description="**表**が出ました！", color=0x3498DB)
+            embed = discord.Embed(title="コイントス", description="**表**が出ました！", color=0xffa500)
             embed.set_thumbnail(
                 url="https://media.discordapp.net/attachments/830673701564317727/830771939831971860/"
                     "FavgDW3fhU7oNzgJY98FDvBsv4f8DMemdePw7rqgAAAAASUVORK5CYII.png"
             )
             await ctx.reply(embed=embed)
         else:
-            embed = discord.Embed(title="コイントス", description="**裏**が出ました！", color=0x3498DB)
+            embed = discord.Embed(title="コイントス", description="**裏**が出ました！", color=0xffa500)
             embed.set_thumbnail(
                 url="https://media.discordapp.net/attachments/830673701564317727/830763529005957130/toAAAAASUVORK5CYII.png"
             )
@@ -163,7 +163,7 @@ class AppCmdVariety(commands.Cog):
         A = random.choice((":one:", ":two:", ":three:"))
         B = random.choice((":one:", ":two:", ":three:"))
         C = random.choice((":one:", ":two:", ":three:"))
-        embed = discord.Embed(title="スロット", description="| " + A + " | " + B + " | " + C + " |", color=0x3498DB)
+        embed = discord.Embed(title="スロット", description="| " + A + " | " + B + " | " + C + " |", color=0xffa500)
         await ctx.reply(embed=embed)
         if A == B == C:
             await ctx.reply("当選おめでとう！")
