@@ -12,7 +12,7 @@ class AppCmdVariety(commands.Cog):
     async def fortune(self,ctx):
         async with ctx.typing():
             await asyncio.sleep(0)
-        taiki = discord.Embed(title="おみくじ", description="チケットをクリックしておみくじを引きましょう！", color=0x3498DB)
+        taiki = discord.Embed(title="おみくじ", description="チケットをクリックしておみくじを引きましょう！", color=0xffa500)
         taiki.set_thumbnail(url=ctx.author.avatar.url)
         unsei = random.choice(("大吉", "中吉", "小吉", "吉", "凶", "大凶"))
         luckycmd = random.choice(("fortune", "rps", "dice", "pun", "cquiz", "coin", "slot", "totusi"))
