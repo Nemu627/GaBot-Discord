@@ -176,8 +176,8 @@ class AppCmdVariety(commands.Cog):
         sita = "^Y" * len(arg)
         await ctx.reply("＿人" + ue + "人＿\n＞　" + arg + "　＜\n￣^Y" + sita + "^Y￣")
     
-    @commands.command()
-    async def 5000choyen(self,ctx,over="5000兆円",under="欲しい！"):
+    @commands.command("5000choyen")
+    async def _5000choyen(self,ctx,over="5000兆円",under="欲しい！"):
         async with ctx.typing():
             await asyncio.sleep(0)
         embed = discord.Embed(title="5000兆円ジェネレーター",description=over+under)
