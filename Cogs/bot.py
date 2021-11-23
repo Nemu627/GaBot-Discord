@@ -17,7 +17,7 @@ class AppCmdBot(commands.Cog):
         async with ctx.typing():
             await asyncio.sleep(0)
         embed = discord.Embed(title="PING", description=f"ただいまのping値は**{round(self.bot.latency * 1000)}**msです！",
-                              color=0x3498DB)
+                              color=0xffa500)
         await ctx.reply(embed=embed, mention_author=False)
 
 def setup(bot):
