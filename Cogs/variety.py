@@ -2,6 +2,8 @@ import discord
 from discord.ext import commands
 import asyncio
 import random
+import urllib.error
+import urllib.parse
 
 class AppCmdVariety(commands.Cog):
     def __init__(self, bot):
