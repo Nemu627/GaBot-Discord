@@ -180,7 +180,8 @@ class AppCmdVariety(commands.Cog):
     
     @commands.command()
     async def _5000(self, ctx, top, bottom):
-        embed = discord.Embed(image_url="https://gsapi.cyberrex.jp/image?"f"top={urllib.parse.quote(top)}&bottom={urllib.parse.quote(bottom)}")
+        embed = discord.Embed(title="5000兆円ジェネレーター",description=f"{top}{bottom}")
+        embed.set_image(url="https://gsapi.cyberrex.jp/image?"f"top={urllib.parse.quote(top)}&bottom={urllib.parse.quote(bottom)}")
         await ctx.reply(embed=embed)
 
 def setup(bot):
