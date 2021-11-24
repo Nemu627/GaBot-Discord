@@ -180,8 +180,9 @@ class AppCmdVariety(commands.Cog):
     async def _5000choyen(self,ctx,over="5000兆円",under="欲しい！"):
         async with ctx.typing():
             await asyncio.sleep(0)
+        image = f"https://gsapi.cyberrex.jp/image?top={over}&bottom={under}"
         embed = discord.Embed(title="5000兆円ジェネレーター",description=f"https://gsapi.cyberrex.jp/image?top={over}&bottom={under}")
-        embed.set_image(url=f"https://gsapi.cyberrex.jp/image?top={over}&bottom={under}")
+        embed.set_image(url=image)
         await ctx.reply(embed=embed)
 
 def setup(bot):
