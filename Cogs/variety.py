@@ -176,13 +176,9 @@ class AppCmdVariety(commands.Cog):
         sita = "^Y" * len(arg)
         await ctx.reply("＿人" + ue + "人＿\n＞　" + arg + "　＜\n￣^Y" + sita + "^Y￣")
     
-    @commands.command("5000choyen")
-    async def _5000choyen(self,ctx,over="5000兆円",under="欲しい！"):
-        async with ctx.typing():
-            await asyncio.sleep(0)
-        image = f"https://gsapi.cyberrex.jp/image?top={over}&bottom={under}"
-        embed = discord.Embed(title="5000兆円ジェネレーター",description=f"https://gsapi.cyberrex.jp/image?top={over}&bottom={under}")
-        embed.set_image(url=image)
+    @commands.command()
+    async def _5000(self, ctx, top, bottom):
+        embed = discord.Embed(image_url="https://gsapi.cyberrex.jp/image?"f"top={urllib.parse.quote(top)}&bottom={urllib.parse.quote(bottom)}")
         await ctx.reply(embed=embed)
 
 def setup(bot):
