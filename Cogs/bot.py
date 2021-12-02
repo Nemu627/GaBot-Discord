@@ -15,7 +15,7 @@ class AppCmdBot(commands.Cog):
     @commands.command()
     async def list(self,ctx):
         embed = discord.Embed(title="コマンドリスト", description="使用可能なコマンド一覧です♪\n各コマンドの詳細は`Cu!help [コマンド名]`で確認できます♪", colour=0x3498DB)
-        embed1add_field(
+        embed1.add_field(
             name=":robot: 》BOT",
             value="`help`：困ったときはを表示します。\n`list`：コマンドリストを表示します。\n`prof`：CuBOTのプロフィールを表示します。\n`ping`：CuBOTのping値を表示します。",
         )
