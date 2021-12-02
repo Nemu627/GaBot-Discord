@@ -22,7 +22,8 @@ class AppCmdBot(commands.Cog):
                   "`cquiz`：暗算クイズができます。\n"
                   "`coin`：コイントスができます。\n"
                   "`slot`：スロットができます。\n"
-                  "`totusi`：突然の死AAを作成します。",
+                  "`totusi`：突然の死AAを作成します。\n",
+                  "`5000`：5000兆円を生成します。",
         )
         await ctx.reply(embed=embed)
 
