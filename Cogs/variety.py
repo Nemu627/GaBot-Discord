@@ -4,6 +4,7 @@ import asyncio
 import random
 import urllib.error
 import urllib.parse
+import aiohttp
 
 class AppCmdVariety(commands.Cog):
     def __init__(self, bot):
@@ -183,6 +184,17 @@ class AppCmdVariety(commands.Cog):
         embed = discord.Embed(title="5000兆円ジェネレーター",description=f"{top}{bottom}", color=0xffa500)
         embed.set_image(url="https://gsapi.cyberrex.jp/image?"f"top={urllib.parse.quote(top)}&bottom={urllib.parse.quote(bottom)}")
         await ctx.reply(embed=embed)
+    
+    @commands.command()
+    async def neko(self, ctx):
+        async with aiohttp.ClientSession() as session:
+            async with session.get(
+                "https://nekobot.xyz/api/image?type=neko"
+            ) as response:
+                res = await response.json()
+                embed = discord.Embed(color=0xffa500)
+                embed.set_image(url=res["message"])
+                await ctx.reply(embed=embed)
 
 def setup(bot):
     return bot.add_cog(AppCmdVariety(bot))
