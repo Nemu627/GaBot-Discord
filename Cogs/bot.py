@@ -18,6 +18,7 @@ class AppCmdBot(commands.Cog):
         embed.add_field(
             name=":robot: 》BOT",
             value="`help`：困ったときはを表示します。\n`list`：コマンドリストを表示します。\n`prof`：CuBOTのプロフィールを表示します。\n`ping`：CuBOTのping値を表示します。",
+            inline=False
         )
         embed.add_field(
             name=":video_game: 》バラエティ",
