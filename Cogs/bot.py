@@ -13,16 +13,13 @@ class AppCmdBot(commands.Cog):
         await ctx.reply("coming soon ...")
         
     @commands.command()
-    async def list(self,ctx):
-        embed = discord.Embed(title="コマンドリスト", description="使用可能なコマンド一覧です♪\n各コマンドの詳細は`Cu!help [コマンド名]`で確認できます♪", colour=0x3498DB)
+    async def help(self,ctx):
+        embed = discord.Embed(title="ヘルプ", description="次の対戦相手はあなた？\nバラエティ特化型の派生BOT！Geだよ！", colour=0xffa500)
         embed.add_field(
-            name=":robot: 》BOT",
-            value="`help`：困ったときはを表示します。\n`list`：コマンドリストを表示します。\n`prof`：CuBOTのプロフィールを表示します。\n`ping`：CuBOTのping値を表示します。",
-            inline=False
-        )
-        embed.add_field(
-            name=":video_game: 》バラエティ",
-            value="`fortune`：おみくじが引けます。\n"
+            name=":robot: 》コマンドリスト",
+            value="`help`：ヘルプを表示します。\n"
+                  "`ping`：GeBOTのping値を表示します。\n"
+                  "`fortune`：おみくじが引けます。\n"
                   "`rps`：じゃんけんができます。\n"
                   "`dice`：サイコロを振れます。\n"
                   "`pun`：ダジャレが聞けます。\n"
