@@ -186,10 +186,10 @@ class AppCmdVariety(commands.Cog):
         await ctx.reply(embed=embed)
     
     @commands.command()
-    async def neko(self, ctx):
+    async def neko(self, ctx, type="neko"):
         async with aiohttp.ClientSession() as session:
             async with session.get(
-                "https://nekobot.xyz/api/image?type=neko"
+                "https://nekobot.xyz/api/image?type="+type
             ) as response:
                 res = await response.json()
                 embed = discord.Embed(color=0xffa500)
