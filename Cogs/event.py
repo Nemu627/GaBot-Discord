@@ -24,7 +24,7 @@ class AppCmdEvent(commands.Cog):
         if isinstance(error, commands.errors.MissingPermissions):
             embed = discord.Embed(
                 title="エラー-不明なコマンド",
-                description="不明なコマンドです。`Cu!list`でコマンドを確認してください。\nこのエラーが多発する場合は[公式サーバー](https://discord.gg/RFPQmRnv2j)までお問い合わせください。\n```" + error_msg + "```",
+                description="不明なコマンドです。`Ga!list`でコマンドを確認してください。\nこのエラーが多発する場合は[公式サーバー](https://discord.gg/RFPQmRnv2j)までお問い合わせください。\n```" + error_msg + "```",
                 colour=0xffa500,
             )
             await ctx.reply(embed=embed)
