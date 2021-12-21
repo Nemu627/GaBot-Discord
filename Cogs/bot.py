@@ -23,7 +23,8 @@ class AppCmdBot(commands.Cog):
                   "`coin`：コイントスができます。\n"
                   "`slot`：スロットができます。\n"
                   "`totusi`：突然の死AAを作成します。\n"
-                  "`5000`：5000兆円を生成します。",
+                  "`5000`：5000兆円を生成します。\n"
+                  "`neko`：猫耳のイラストを生成します。",
         )
         await ctx.reply(embed=embed)
 
