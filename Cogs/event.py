@@ -50,7 +50,7 @@ class AppCmdEvent(commands.Cog):
         for guild in self.bot.guilds:
             members += guild.member_count - 1
         await self.bot.change_presence(
-            activity=discord.Activity(name=f"Cu!help | {str(servers)}servers | {str(members)}users", type=3)
+            activity=discord.Activity(name=f"Ga!help | {str(servers)}servers | {str(members)}users", type=3)
         )
         
     @commands.Cog.listener()
@@ -60,7 +60,7 @@ class AppCmdEvent(commands.Cog):
         for guild in self.bot.guilds:
             members += guild.member_count - 1
         await self.bot.change_presence(
-            activity=discord.Activity(name=f"Cu!help | {str(servers)}servers | {str(members)}users", type=3)
+            activity=discord.Activity(name=f"Ga!help | {str(servers)}servers | {str(members)}users", type=3)
         )
 
     @commands.Cog.listener()
@@ -70,7 +70,7 @@ class AppCmdEvent(commands.Cog):
         for guild in self.bot.guilds:
             members += guild.member_count - 1
         await self.bot.change_presence(
-            activity=discord.Activity(name=f"Cu!help | {str(servers)}servers | {str(members)}users", type=3)
+            activity=discord.Activity(name=f"Ga!help | {str(servers)}servers | {str(members)}users", type=3)
         )
 
     @commands.Cog.listener()
@@ -80,7 +80,7 @@ class AppCmdEvent(commands.Cog):
         for guild in self.bot.guilds:
             members += guild.member_count - 1
         await self.bot.change_presence(
-            activity=discord.Activity(name=f"Cu!help | {str(servers)}servers | {str(members)}users", type=3)
+            activity=discord.Activity(name=f"Ga!help | {str(servers)}servers | {str(members)}users", type=3)
         )
 
 def setup(bot):
