@@ -63,25 +63,5 @@ class AppCmdEvent(commands.Cog):
             activity=discord.Activity(name=f"Ga!help | {str(servers)}servers | {str(members)}users", type=3)
         )
 
-    @commands.Cog.listener()
-    async def on_member_join(self,member):
-        servers = len(self.bot.guilds)
-        members = 0
-        for guild in self.bot.guilds:
-            members += guild.member_count - 1
-        await self.bot.change_presence(
-            activity=discord.Activity(name=f"Ga!help | {str(servers)}servers | {str(members)}users", type=3)
-        )
-
-    @commands.Cog.listener()
-    async def on_member_remove(self,member):
-        servers = len(self.bot.guilds)
-        members = 0
-        for guild in self.bot.guilds:
-            members += guild.member_count - 1
-        await self.bot.change_presence(
-            activity=discord.Activity(name=f"Ga!help | {str(servers)}servers | {str(members)}users", type=3)
-        )
-
 def setup(bot):
     return bot.add_cog(AppCmdEvent(bot))
